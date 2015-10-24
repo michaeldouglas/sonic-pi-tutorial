@@ -1,0 +1,11 @@
+live_loop :flibble do
+  sample :ambi_choir, rate: 0.3
+  sample :bd_haus, rate: 1
+  sleep 1
+end
+2.times do
+  live_loop :haunted do
+    sample :perc_bell, rate: rrand(-1.5, 1.5)
+    sleep rrand(0.1, 2)
+  end
+end
